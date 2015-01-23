@@ -1,0 +1,14 @@
+/*
+Theme Name:         Kent Blogs Home
+Theme URI:          https://github.com/unikent/blog-home-theme-kent
+Description:        New home theme for blogs.kent.ac.uk
+Version:            1.0.0
+Author:             IS Webdev Team
+Author URI:         https://blogs.kent.ac.uk
+Template:           blog-theme-kent
+
+License:            MIT License
+License URI:        http://opensource.org/licenses/MIT
+*/
+
+@import url("../blog-theme-kent/style.css");
