@@ -1,21 +1,8 @@
 <?php
 
-
-//remove_action( 'wp_enqueue_scripts', 'kentblogs_nav_bar');
-
-//remove_filter('wp_footer','kentblogs_add_footer',99);
-//remove_action( 'wp_enqueue_scripts', 'kentblogs_footer_scripts');
-
+include "lib/child-scripts.php";
 
 remove_filter( 'the_content', 'rc_process_post' );
-
-add_action('wp_enqueue_scripts',function(){
-    wp_enqueue_script('datatables',get_stylesheet_directory_uri().'/assets/js/jquery.dataTables.min.js',array('jquery'),null);
-    wp_enqueue_style('datatables',get_stylesheet_directory_uri().'/assets/css/jquery.dataTables.min.css',false,null);
-    wp_enqueue_style('gcs-style',get_stylesheet_directory_uri()."/assets/less/search-results.css",false,null);
-    wp_enqueue_script('blogs_home',get_stylesheet_directory_uri() . "/assets/js/blogs_home.js",false,null);
-    wp_localize_script('blogs_home','AJAX',array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
-});
 
 add_action( 'wp_ajax_get_latest', 'get_latest_posts' );
 add_action( 'wp_ajax_nopriv_get_latest', 'get_latest_posts' );

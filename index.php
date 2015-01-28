@@ -13,8 +13,8 @@ $aggregate_data = array_slice($aggregate_data,(($p-1)*6),6);
 ?>
 <?php foreach($aggregate_data as $post){
     ?>
-    <article class="latest-post">
-        <div class="latest-post-img">
+    <article class="grid-post">
+        <div class="grid-post-img">
             <img class="img-responsive" src="<?php echo preg_replace('/\/wp-content\/blogs.dir\/\d+/','',$post['featured_image']['sizes']['large']['url']); ?>">
         </div>
         <header>

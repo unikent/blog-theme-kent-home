@@ -24,8 +24,8 @@ $blogs = wp_get_sites(array('public'=>true,'deleted'=>false,'spam'=>false,'limit
     <tr>
         <th>Blog Name</th>
         <th>Description</th>
-        <th style="width:10%">Created Date</th>
-        <th style="width:10%">Last Updated</th>
+        <th style="width:12%">Created Date</th>
+        <th style="width:12%">Last Updated</th>
     </tr>
     </thead>
     <tbody>
