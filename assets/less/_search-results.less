@@ -4,8 +4,14 @@
     position: relative;
     padding: 0;
     font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    table{
+      margin-bottom: 0;
+    }
     .gsc-control-wrapper-cse {
       font-size: 16px;
+      .gsc-result{
+        padding: 0;
+      }
       .gsc-webResult{
         .gs-result{
           padding: 1em 0 1em 0;
@@ -17,13 +23,13 @@
             height: 1.9em;
             text-decoration: none;
             a.gs-title {
-              color: #263566;
+              color: @brand-primary;
               text-decoration: none;
               border-bottom: solid 1px #ddd;
               font-weight:normal;
               font-size:1.3em;
               &:hover, &:focus {
-                border-bottom: solid 1px #263566;
+                border-bottom: solid 1px @brand-primary;
               }
               b, em{
                 font-size: inherit;
@@ -34,6 +40,7 @@
           }
           .gsc-table-result{
             font-size: 16px;
+            margin-bottom: 0;
             .gs-snippet{
               color: #333;
             }
@@ -74,7 +81,7 @@
           height: auto;
           &.gsc-tabhActive{
             color: #333;
-            border-bottom: 3px solid #263566;
+            border-bottom: 3px solid @brand-primary;
           }
         }
       }
@@ -106,7 +113,7 @@
             margin: 0;
             border: 1px solid #E2E2E2;
             border-right: none;
-            color: #263566;
+            color: @brand-primary;
             &:last-child{
               border-right: 1px solid #E2E2E2;
             }

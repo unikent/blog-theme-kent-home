@@ -5,20 +5,6 @@ Template Name: Blogs List
 
 $blogs = wp_get_sites(array('public'=>true,'deleted'=>false,'spam'=>false,'limit'=>1000));
 ?>
-<script>
-    jQuery(document).ready(function($) {
-        $('#allblogs').DataTable({
-            paging: false
-        } );
-    });
-</script>
-<style>
-    .dataTables_wrapper .dataTables_filter{
-        float:left;
-        width:100%;
-        text-align: left;
-    }
-</style>
 <table class="table table-striped" id="allblogs">
     <thead>
     <tr>

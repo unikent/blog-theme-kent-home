@@ -59,9 +59,11 @@
             }
         },
         // About us page, note the change from about-us to about_us.
-        about_us: {
+        page_template_template_allblogs_php: {
             init: function() {
-                // JavaScript to be fired on the about us page
+                $('#allblogs').DataTable({
+                    paging: false
+                } );
             }
         }
     };

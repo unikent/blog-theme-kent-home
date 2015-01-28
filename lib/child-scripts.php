@@ -30,6 +30,10 @@ function child_scripts() {
   wp_enqueue_script('modernizr', get_stylesheet_directory_uri() . $assets['modernizr'], array(), null, true);
   wp_enqueue_script('kentblogshome_js', get_stylesheet_directory_uri() . $assets['js'], array(), null, true);
   wp_localize_script('kentblogshome_js','AJAX',array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
+
+    if(is_page_template('template-searchresults.php')) {
+        wp_enqueue_script('gcse', get_stylesheet_directory_uri() . '/assets/js/gcse.js', array(), null, true);
+    }
 }
 add_action('wp_enqueue_scripts', 'child_scripts', 101);
 
