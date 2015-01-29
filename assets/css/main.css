@@ -729,10 +729,20 @@ a.wp-caption.active {
   clear: both;
 }
 .main .search-form .comment-form input[type="submit"] {
-  padding: 10px;
+  height: 2.8em;
 }
 .main .search-form .comment-form input[type="submit"] i:before {
   font-size: 2em;
+}
+@media (min-width: 768px) {
+  .main .search-form .comment-form input[type="submit"] {
+    height: 3.2em;
+  }
+}
+@media (min-width: 992px) {
+  .main .search-form .comment-form input[type="submit"] {
+    height: 3.5em;
+  }
 }
 .dataTables_wrapper .dataTables_filter {
   float: left;
