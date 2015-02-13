@@ -1,6 +1,6 @@
 <article class="grid-post">
     <div class="grid-post-img">
-        <img class="img-responsive" src="<?php echo preg_replace('/\/wp-content\/blogs.dir\/\d+/','',$post['featured_image']['sizes']['large']['url']); ?>">
+        <a title="<?php echo esc_attr($post['title']); ?>" href="<?php echo $post['permalink']; ?>"><img class="img-responsive" src="<?php echo preg_replace('/\/wp-content\/blogs.dir\/\d+/','',$post['featured_image']['sizes']['large']['url']); ?>"></a>
     </div>
     <header>
         <h2 class="entry-title"><a title="<?php echo esc_attr($post['title']); ?>" href="<?php echo $post['permalink']; ?>"><?php echo $post['title']; ?></a></h2>
