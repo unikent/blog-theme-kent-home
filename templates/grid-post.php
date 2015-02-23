@@ -7,6 +7,6 @@
         <p class="byline"><a class="blog-source" href="<?php echo get_site_url($post['blog_id']); ?>" rel="source"><?php echo $post['blog_name']; ?></a> | <time class="updated" datetime="<?php echo $post['date']; ?>"><?php echo str_replace(' ','&nbsp',date('d F Y',$post['date'])); ?></time></p>
     </header>
     <div class="entry-content">
-        <?php echo $post['excerpt']; ?>
+        <?php echo apply_filters('the_excerpt',wp_trim_words(trim($post['excerpt']), roots_excerpt_length(25) ,roots_excerpt_more())); ?>
     </div>
 </article>

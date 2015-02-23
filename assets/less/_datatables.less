@@ -1,6 +1,13 @@
 @import (inline) "../vendor/datatables/media/css/jquery.dataTables.css";
 
 .dataTables_wrapper{
+  font-size: 0.8em;
+  @media (min-width: @screen-md-min) {
+    font-size: 0.84em;
+  }
+  @media (min-width: @screen-lg-min) {
+    font-size: 1em;
+  }
   .dataTables_filter{
     float:left;
     width:100%;

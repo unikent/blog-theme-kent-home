@@ -5,7 +5,7 @@
     $header_bg_id = get_attachment_id_from_src($header_bg);
     $header_bg_src = wp_get_attachment_image_src($header_bg_id,'blog_header',false);
   }else{
-    $header_bg_src = array(get_template_directory_uri() . '/assets/img/blog-header-default.jpg');
+    $header_bg_src = array(get_stylesheet_directory_uri() . '/assets/images/blogshome.jpg');
   }
   ?>
   <div class="blog-header-img">
@@ -34,7 +34,7 @@
       <div class="input-group">
         <input type="search" value="<?php echo isset($_REQUEST['q'])?$_REQUEST['q']:''; ?>" name="q" class="search-field form-control" placeholder="Search all blogs" required>
     <span class="input-group-btn">
-      <button type="submit" class="search-submit btn btn-default"><span class="sr-only"><?php _e('Search', 'roots'); ?></span><i class="kf-search"></i></button>
+      <button type="submit" class="search-submit btn btn-primary"><span class="sr-only"><?php _e('Search', 'roots'); ?></span><i class="kf-search"></i></button>
     </span>
       </div>
     </form>
