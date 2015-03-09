@@ -57,3 +57,8 @@ function kentblogshome_show_sidebar($display)
 
     return $display && $sidebar_config->display;
 }
+
+function aggregator_more() {
+    global $post;
+    return ' &hellip; <a href="' . $post['permalink'] . '">' . __('Read&nbsp;more', 'roots') . '</a>';
+}
