@@ -782,20 +782,12 @@ fieldset[disabled] .comment-form input[type="submit"].active {
   background-color: #52677f;
   border-color: #52677f;
 }
-.main .search-form .comment-form input[type="submit"] {
-  height: 2.8em;
-}
 .main .search-form .comment-form input[type="submit"] i:before {
-  font-size: 2em;
-}
-@media (min-width: 768px) {
-  .main .search-form .comment-form input[type="submit"] {
-    height: 3.2em;
-  }
+  font-size: 1.5em;
 }
 @media (min-width: 992px) {
-  .main .search-form .comment-form input[type="submit"] {
-    height: 3.5em;
+  .main .search-form .comment-form input[type="submit"] i:before {
+    font-size: 2em;
   }
 }
 /*
