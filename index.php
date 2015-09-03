@@ -1,11 +1,8 @@
 <?php get_template_part('templates/page', 'header');
 
 // get and display popular/trending posts
-$popular_posts = get_site_option('wp-multisite-post-popular');
+$popular_posts = kentblogs_popular_get_posts();
 
-if ($popular_posts === false) {
-	$popular_posts = kentblogs_popular_get_posts();
-}
 ?>
 <div class="well posts popular">
 	<h2 class="h1">Trending posts</h2>
