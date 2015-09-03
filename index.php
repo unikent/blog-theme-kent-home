@@ -6,7 +6,6 @@ $popular_posts = get_site_option('wp-multisite-post-popular');
 if ($popular_posts === false) {
 	$popular_posts = kentblogs_popular_get_posts();
 }
-
 ?>
 <div class="well posts popular">
 	<h2 class="h1">Trending posts</h2>
@@ -19,8 +18,14 @@ if ($popular_posts === false) {
 	</div>
 </div>
 
-<div class="posts all">
-	<h2 class="h1">All posts</h2>
+<?php
+
+$aggregate_data = get_site_option('wp-multisite-post-aggregate');
+
+?>
+
+<div class="posts latest">
+	<h2 class="h1" >Latest Posts</h2>
 	<div class="row">
 		
 		<?php
