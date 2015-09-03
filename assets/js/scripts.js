@@ -15190,8 +15190,38 @@
         // About us page, note the change from about-us to about_us.
         page_template_template_allblogs_php: {
             init: function() {
+                var extensions = {
+                    "sFilter": "dataTables_filter form-inline",
+                    };
+                // Used when bJQueryUI is false
+                $.extend($.fn.dataTableExt.oStdClasses, extensions);
+
+
                 $('#allblogs').DataTable({
-                    paging: false
+                    paging: false,
+                    initComplete: function () {
+
+                            var column = this.api().column(2);
+                            var select = $('<label>Category: <select class="form-control"><option value="">All</option></select></label>')
+                                .appendTo( $('#allblogs_filter'));
+                            select = select.find('select');
+                            select.on( 'change', function () {
+                                var val = $.fn.dataTable.util.escapeRegex(
+                                    $(this).val()
+                                );
+
+                                column
+                                    .search( val ? '^'+val+'$' : '', true, false )
+                                    .draw();
+                            } );
+
+                            column.data().unique().sort().each( function ( d, j ) {
+                                if(d!=='') {
+                                    select.append('<option value="' + d + '">' + (d === '' ? 'All' : d) + '</option>');
+                                }
+                            } );
+
+                    }
                 } );
             }
         }

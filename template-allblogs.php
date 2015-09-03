@@ -10,6 +10,7 @@ $blogs = wp_get_sites(array('public'=>true,'deleted'=>false,'spam'=>false,'limit
     <tr>
         <th>Blog Name</th>
         <th>Description</th>
+        <th>Category</th>
         <th style="width:12%">Created Date</th>
         <th style="width:12%">Last Updated</th>
     </tr>
@@ -26,6 +27,7 @@ $blogs = wp_get_sites(array('public'=>true,'deleted'=>false,'spam'=>false,'limit
     <tr>
         <td><a href="<?php echo get_bloginfo('url');?>" title="<?php echo esc_attr(get_bloginfo('title'));?>"><?php echo get_bloginfo('title'); ?></a></td>
         <td><?php echo strlen(get_bloginfo('description'))>255?substr(get_bloginfo('description'),0,255) . '&hellip; ':get_bloginfo('description'); ?></td>
+        <td><?php echo get_option('site_category'); ?></td>
         <td><?php echo date('d M Y',strtotime($blog['registered'])); ?></td>
         <td><?php echo date('d M Y',strtotime($blog['last_updated'])); ?></td>
     </tr>
