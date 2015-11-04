@@ -15165,7 +15165,7 @@
                         $.ajax(AJAX.ajaxurl, {
                             data: {action: 'get_latest', page: $p},
                             success: function ($data) {
-                                $('#latest-foot').before($data);
+                                $('.posts.latest .row').append($data);
                                 $more = $('#more-button');
                                 $p = parseInt($more.data('page'));
                                 $more.data('page', $p + 1);
